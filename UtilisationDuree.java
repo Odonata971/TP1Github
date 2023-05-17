@@ -77,12 +77,15 @@ public class UtilisationDuree {
     public static void testChaine() {
         Scanner entree = new Scanner(System.in);
         String phrase;
-        System.out.print("Entrez une chaine : ");
+        System.out.print("Vous allez entrer une chaine et le programme vérifiera"
+        				 + " si elle est bien dans le format hh:mm:ss."
+        				 + "\nLe separateur ':' peut etre remplace par n'importe"
+        				 + " quel caractere.\n\t==>");
         phrase = entree.nextLine();
         if (DureeHMS.estChaineDuree(phrase)) {
-            System.out.println("OK !!");
+            System.out.printf("La chaine %s respecte bien le format hh:mm:ss.",phrase);
         } else {
-            System.out.println("ERREUR !!! ");
+            System.out.println("ERREUR !!!");
         }
     }
 }
